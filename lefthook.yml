@@ -1,0 +1,12 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+
+pre-commit:
+  parallel: true
+  commands:
+    format:
+      glob: '*.{js,jsx,ts,tsx,astro,md,yml,yaml,json,json5,mjs}'
+      stage_fixed: true
+      run: bun prettier --write --ignore-unknown {staged_files}
